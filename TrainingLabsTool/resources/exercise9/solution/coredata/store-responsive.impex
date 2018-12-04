@@ -1,0 +1,16 @@
+# 
+# Create the Responsive Bookstore BaseStore
+
+$productCatalog=bookstoreProductCatalog
+$classificationCatalog=BookstoreClassification
+$storeUid=bookstore
+$defaultCurrency=EUR
+$defaultLanguage=en
+$checkoutFlowGroup=responsiveCheckoutGroup
+
+INSERT_UPDATE BaseStore;uid[unique=true];catalogs(id);defaultCurrency(isocode);defaultLanguage(isocode);currencies(isocode);languages(isocode);checkoutFlowGroup;
+;$storeUid;$productCatalog,$classificationCatalog;$defaultCurrency;$defaultLanguage;$defaultCurrency;$defaultLanguage;$checkoutFlowGroup;
+
+INSERT_UPDATE BaseStore2CountryRel;source(isocode)[unique=true];target(uid)[unique=true]
+;DE;bookstore
+;US;bookstore

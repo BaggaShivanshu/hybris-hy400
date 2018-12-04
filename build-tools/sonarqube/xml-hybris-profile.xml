@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<profile>
+	<name>EC-hybris-XML</name>
+	<language>xml</language>
+	<rules>
+		<rule>
+			<repositoryKey>xml</repositoryKey>
+			<key>S1778</key>
+			<priority>CRITICAL</priority>
+			<parameters />
+		</rule>
+		<rule>
+			<repositoryKey>xml</repositoryKey>
+			<key>S2260</key>
+			<priority>BLOCKER</priority>
+			<parameters />
+		</rule>
+	</rules>
+</profile>

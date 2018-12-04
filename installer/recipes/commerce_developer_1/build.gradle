@@ -1,0 +1,69 @@
+def config = {
+		localProperties {
+				property 'build.parallel', 'true'
+				property 'hac.webroot', '/hac'
+				property 'bookstorestorefront.webroot', ''
+				property 'storefrontContextRoot', ''
+		}
+
+		extensions {
+			extName 'adaptivesearchsolr'
+			extName 'adaptivesearchbackoffice'
+			extName 'adaptivesearchwebservices'
+			extName 'commerceservicesbackoffice'
+			extName 'solrfacetsearchbackoffice'
+			extName 'solrserver'
+
+			extName 'acceleratorwebservicesaddon'
+
+			extName 'rulebuilderbackoffice'
+			extName 'couponbackoffice'
+			extName 'droolsruleengineservices'
+			extName 'couponfacades'
+
+			extName 'cmswebservices'
+			extName 'smarteditwebservices'
+			extName 'cmssmarteditwebservices'
+			extName 'permissionswebservices'
+			extName 'smarteditaddon'
+			extName 'cmssmartedit'
+			extName 'cmsbackoffice'
+
+			extName 'previewpersonalizationweb'
+			extName 'personalizationcmsweb'
+			extName 'personalizationsmartedit'
+			extName 'personalizationpromotionssmartedit'
+			extName 'personalizationsampledataaddon'
+			extName 'personalizationpromotions'
+			extName 'personalizationpromotionsweb'
+			extName 'personalizationservicesbackoffice'
+			extName 'personalizationpromotionsbackoffice'
+			extName 'personalizationcmsbackoffice'
+			extName 'personalizationsearchbackoffice'
+			extName 'personalizationsearchsmartedit'
+			extName 'personalizationsearchweb'
+			extName 'personalizationsearchsamplesaddon'
+			extName 'ycommercewebservices'
+	}
+}
+
+task setup << {
+		apply plugin: 'installer-platform-plugin'
+		apply plugin: 'installer-addon-plugin'
+		def pl = platform(config)
+		pl.setup()
+}
+
+task initialize << {
+		apply plugin: 'installer-platform-plugin'
+		def pl = platform(config)
+		pl.build()
+		pl.initialize()
+}
+
+
+task start << {
+		apply plugin: 'installer-platform-plugin'
+		def pl = platform(config)
+		pl.start()
+}

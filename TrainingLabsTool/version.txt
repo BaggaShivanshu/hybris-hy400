@@ -1,0 +1,4 @@
+SAP Hybris Class HY400
+releasedate=2018/09/01
+software version=6.7.0.0
+course version=6.7.0 hotfix

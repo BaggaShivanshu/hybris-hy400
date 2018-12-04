@@ -1,0 +1,69 @@
+$contentCatalog=bookstoreContentCatalog
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+
+# Language
+$lang=en
+
+## Samuel's change
+# CMS Link Components
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$lang]
+;;LoginLink;"Login"
+;;AllGenresCategoryLink;"Genre"
+;;BooksCategoryLink;"Books"
+;;EBooksCategoryLink;"E-Books"
+;;AudioBooksCategoryLink;"Audio Books"
+;;FictionCategoryLink;"Fiction"
+;;NonFictionCategoryLink;"Non Fiction"
+;;CrimeCategoryLink;"Crime"
+;;HorrorCategoryLink;"Horror"
+;;MysteryCategoryLink;"Mystery"
+;;RomanceCategoryLink;"Romance"
+;;ScienceFictionCategoryLink;"Science Fiction"
+;;WesternCategoryLink;"Western"
+;;ThrillerCategoryLink;"Thriller"
+;;ComedyCategoryLink;"Comedy"
+;;DramaCategoryLink;"Drama"
+;;FantasyCategoryLink;"Fantasy"
+;;ComputerScienceCategoryLink;"Computer Science"
+;;AutobiographyCategoryLink;"Autobiography"
+;;DictionaryCategoryLink;"Dictionary"
+;;EncyclopediaCategoryLink;"Encyclopedia"
+;;HistoryCategoryLink;"History"
+;;PhilosophyCategoryLink;"Philosophy"
+;;SelfHelpCategoryLink;"Self Help"
+;;PaperBackCategoryLink;"Paperback"
+;;HardCoverCategoryLink;"Hardcover"
+;;KindleCategoryLink;"Kindle"
+;;AudioCDCategoryLink;"Audio CD"
+;;AboutAcceleratorLink;"About Commerce Accelerator"
+;;AboutHybrisLink;"About hybris"
+;;DocumentationLink;"Documentation"
+;;FacebookLink;"Facebook"
+;;HomepageNavLink;"Home"
+;;LinkedInLink;"Linked In"
+;;TwitterLink;"Twitter"
+;;ContactUsLink;"Contact Us"
+;;AgileCommerceBlogLink;"Agile Commerce Blog"
+
+## Samuel's change
+# CMS Footer Component
+INSERT_UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice[lang=$lang]
+;;FooterNavigationComponent;"© 2018 SAP Hybris bookstore"
+
+## Samuel's change
+# CMS Navigation Nodes
+INSERT_UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
+;;FictionLinksNavNode;"Fiction"
+;;NonFictionLinksNavNode;"Non Fiction"
+;;BookstoreNavNode;"Bookstore Site"
+;;GenreNavNode;"Genre"
+;;BooksNavNode;"Books"
+;;e-BooksNavNode;"EBooks"
+;;AudioBooksNavNode;"Audio Books"
+;;AcceleratorNavNode;"Accelerator"
+;;HybrisNavNode;"Hybris"
+;;FollowUsNavNode;"Follow Us"
+
+
+INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
+;;NewBookstoreHomepageProductCarouselComponent;What's New

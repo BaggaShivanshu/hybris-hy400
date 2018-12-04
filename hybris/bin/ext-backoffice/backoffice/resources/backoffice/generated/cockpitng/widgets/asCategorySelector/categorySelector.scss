@@ -1,0 +1,29 @@
+@import '/Users/i844959/hybris/dev1_66/hyCom-dev1-OSX-6.7.0.0/hyCom-dev1-OSX-6.7.0.0/workspace/hybris/bin/ext-backoffice/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/Users/i844959/hybris/dev1_66/hyCom-dev1-OSX-6.7.0.0/hyCom-dev1-OSX-6.7.0.0/workspace/hybris/bin/ext-backoffice/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "scss/support/_categorySelector-variables.scss";
+
+.yas-categoryelector {
+    //min-height: 100%;
+    background-color: $categorySelector__widget--bg-color;
+
+    > .z-tree {
+        margin-left: $categorySelector__tree--margin-left;
+    }
+
+    .z-treecell {
+        border: none;
+    }
+    .z-treerow {
+        .z-treecell-content {
+            color: $categorySelector__default--color;
+        }
+
+        &-selected .z-treecell-content {
+            color: $categorySelector__treerow-selected--color;
+        }
+        &:hover .z-treecell-content {
+            color: $categorySelector__default-hover--color;
+        }
+    }
+}

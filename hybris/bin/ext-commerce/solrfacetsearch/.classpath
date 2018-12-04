@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="gensrc"/>
+	<classpathentry exported="true" kind="lib" path="lib/noggit-0.8.jar"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="testsrc"/>
+	<classpathentry exported="true" kind="lib" path="lib/zookeeper-3.4.10.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="bin/solrfacetsearchserver.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://download.hybris.com/api/6.7.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="/platform"/>
+	<classpathentry exported="true" kind="lib" path="resources"/>
+	<classpathentry exported="true" kind="lib" path="lib/solr-solrj-7.2.1.jar"/>
+	<classpathentry kind="output" path="eclipsebin/notused"/>
+</classpath>
